@@ -1,29 +1,43 @@
-/* Gallery.css */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Zentriert die Bilder horizontal */
-  gap: 16px; /* Abstand zwischen den Bildern */
-  padding: 16px; /* Innenabstand des Containers */
+  display: block;
+  padding: 16px;
+  text-align: center; /* Zentriert den Inhalt horizontal */
+}
+
+.gallery-item {
+  width: 33%; /* Nimmt 33% der Containerbreite auf größeren Bildschirmen ein */
+  margin: 0 auto 16px auto; /* Zentriert das Element und fügt unten Abstand hinzu */
+  overflow: hidden;
 }
 
 .gallery img {
-  width: 100%; /* Breite des Bildes auf 100% des Containers setzen */
-  max-width: 300px; /* Maximale Breite auf 300px setzen */
-  height: auto; /* Höhe automatisch anpassen, um das Seitenverhältnis beizubehalten */
-  object-fit: cover; /* Bildfüllung innerhalb des Containers */
-  border-radius: 8px; /* Abgerundete Ecken für die Bilder */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für die Bilder */
-  display: block; /* Verhindert, dass zusätzliche Leerzeichen im Inline-Layout erscheinen */
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .gallery img {
-    max-width: 33%; /* Auf großen Geräten ein Drittel der Containerbreite */
+/* Media Query für Mobilgeräte */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 66%; /* Nimmt 66% der Containerbreite auf kleineren Bildschirmen ein */
   }
 }
 
-.gallery img:hover {
-  transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
-  transition: transform 0.3s ease; /* Sanfter Übergang */
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .gallery {
+    background-color: #121212; /* Dunkler Hintergrund für die Galerie */
+    color: #ffffff; /* Heller Text */
+  }
+
+  .gallery-item {
+    background-color: #1e1e1e; /* Dunklerer Hintergrund für die einzelnen Items */
+  }
+
+  .gallery img {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Hellerer Schatten im Dark Mode */
+  }
 }
