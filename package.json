@@ -1,5 +1,6 @@
 {
   "name": "image-gallery",
+  "homepage": "https://images.theprojectindex.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

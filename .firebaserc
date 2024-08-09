@@ -1,5 +1,16 @@
 {
   "projects": {
     "default": "theprojectindex-8b645"
-  }
+  },
+  "targets": {
+    "theprojectindex-8b645": {
+      "hosting": {
+        "images": [
+          "imgx621"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

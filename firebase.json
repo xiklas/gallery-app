@@ -13,6 +13,7 @@
     }
   ],
   "hosting": {
+    "site":"imgx621",
     "public": "build",
     "ignore": [
       "firebase.json",
