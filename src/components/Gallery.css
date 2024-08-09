@@ -22,7 +22,7 @@
 /* Media Query für Mobilgeräte */
 @media (max-width: 768px) {
   .gallery-item {
-    width: 66%; /* Nimmt 66% der Containerbreite auf kleineren Bildschirmen ein */
+    width: 90%; /* Nimmt 66% der Containerbreite auf kleineren Bildschirmen ein */
   }
 }
 
