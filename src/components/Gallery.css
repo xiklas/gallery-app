@@ -2,12 +2,14 @@
   display: block;
   padding: 16px;
   text-align: center; /* Zentriert den Inhalt horizontal */
+  background-color: #f5f5f5; /* Heller Hintergrund für die Galerie (Standard) */
 }
 
 .gallery-item {
   width: 33%; /* Nimmt 33% der Containerbreite auf größeren Bildschirmen ein */
   margin: 0 auto 16px auto; /* Zentriert das Element und fügt unten Abstand hinzu */
   overflow: hidden;
+  background-color: transparent; /* Kein Hintergrund für die Gallery-Items */
 }
 
 .gallery img {
@@ -15,14 +17,14 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Standard Schatten */
+  display: block; /* Verhindert zusätzliche Leerzeichen */
 }
 
 /* Media Query für Mobilgeräte */
 @media (max-width: 768px) {
   .gallery-item {
-    width: 90%; /* Nimmt 66% der Containerbreite auf kleineren Bildschirmen ein */
+    width: 90%; /* Nimmt 90% der Containerbreite auf kleineren Bildschirmen ein */
   }
 }
 
@@ -34,7 +36,7 @@
   }
 
   .gallery-item {
-    background-color: #1e1e1e; /* Dunklerer Hintergrund für die einzelnen Items */
+    background-color: transparent; /* Kein Hintergrund für die Gallery-Items im Dark Mode */
   }
 
   .gallery img {
