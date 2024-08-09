@@ -1,0 +1,29 @@
+/* Gallery.css */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Zentriert die Bilder horizontal */
+  gap: 16px; /* Abstand zwischen den Bildern */
+  padding: 16px; /* Innenabstand des Containers */
+}
+
+.gallery img {
+  width: 100%; /* Breite des Bildes auf 100% des Containers setzen */
+  max-width: 300px; /* Maximale Breite auf 300px setzen */
+  height: auto; /* Höhe automatisch anpassen, um das Seitenverhältnis beizubehalten */
+  object-fit: cover; /* Bildfüllung innerhalb des Containers */
+  border-radius: 8px; /* Abgerundete Ecken für die Bilder */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sanfter Schatten für die Bilder */
+  display: block; /* Verhindert, dass zusätzliche Leerzeichen im Inline-Layout erscheinen */
+}
+
+@media (min-width: 768px) {
+  .gallery img {
+    max-width: 33%; /* Auf großen Geräten ein Drittel der Containerbreite */
+  }
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+  transition: transform 0.3s ease; /* Sanfter Übergang */
+}
